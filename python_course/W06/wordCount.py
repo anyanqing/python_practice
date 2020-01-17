@@ -83,19 +83,17 @@ def replacePunctuations(line):
 
 # 词频排序
 def wordSort(wordCounts):
-    pairs = list(wordCounts.items())
-    # 交换列表数据项排序
-    items = [(y, x) for (x, y) in pairs]
-    items.sort()
+    items = list(wordCounts.items())
+    items.sort(key=lambda x: x[1], reverse=True)
     return items
 
 
 # 输出count个词频结果
 def outputWords(items):
-    for i in range(len(items)-1, len(items)-count-1, -1):
-        print(items[i][1] + '\t' + str(items[i][0]))
-        data.append(items[i][0])
-        words.append(items[i][1])
+    for i in range(count):
+        print(items[i][0] + '\t' + str(items[i][1]))
+        data.append(items[i][1])
+        words.append(items[i][0])
 
 
 def main():
