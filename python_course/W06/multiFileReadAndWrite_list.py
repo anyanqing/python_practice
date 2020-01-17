@@ -50,7 +50,7 @@ for i in range(len(list2_name)):
     lines.append(s)
 
 # 将新生成的合并数据写入新的文件中
-file_tele_email = open(".\outfiles\AddressBook.txt", "w")
+file_tele_email = open(".\outfiles\AddressBookList.txt", "w")
 file_tele_email.writelines(lines)
 
 # 关闭文件
