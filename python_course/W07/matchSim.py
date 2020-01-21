@@ -28,7 +28,7 @@ def simNGames(probA, probB, n):
 def simOneGame(probA, probB):
     scoreA = 0
     scoreB = 0
-    serving = 'A'
+    serving = 'A'  # serving代表谁的球权
     while not gameOver(scoreA, scoreB):
         if serving == 'A':
             if random() < probA:
