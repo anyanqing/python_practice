@@ -23,9 +23,9 @@ def coords(cityname, citycode):
     return jd['geocodes'][0]['adcode']+','+jd['geocodes'][0]['location']
 
 
-def text_save(output, data):  # output为写入CSV文件的路径，data为要写入数据列表.
+def text_save(outputfile, data):  # output为写入CSV文件的路径，data为要写入的数据列表.
 
-    file = open(output, 'a')
+    file = open(outputfile, 'a')
     s = str(data)
 
     file.write(s)
