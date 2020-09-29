@@ -34,20 +34,21 @@ def text_save(outputfile, data):  # output为写入CSV文件的路径，data为�
     file.close()
 
 
-for row in range(0, input.shape[0]):
-    cityname = input['中文名'][row]
-    citycode = input['citycode'][row]
-    # print(cityname, citycode)
-    try:
-        out = coords(cityname, citycode)
-    except:
-        out = 0
-    # out='adcode'+','+'lng'+','+'lat'
-    print(out)
-    text_save('output_latitude&longitude_2', out)
+# for row in range(0, input.shape[0]):
+#     cityname = input['中文名'][row]
+#     citycode = input['citycode'][row]
+#     # print(cityname, citycode)
+#     try:
+#         out = coords(cityname, citycode)
+#     except:
+#         out = 0
+#     # out='adcode'+','+'lng'+','+'lat'
+#     print(out)
+#     text_save('output_latitude&longitude_2', out)
 
 
-# # test
-# out = coords('朝阳区', '010')
-# print(out)
+# test
+out = coords('朝阳区', '010')
+print(out)
 # text_save('output_test', out)
+
